@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>StringAnime</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-size: 5px;
+        margin: 10px;
+        font-family: simsun;
+    }
+</style>
+<body>
+    <div id="container"></div>
+    <div id="ascii"></div> 
+</body>
+<script src="js/StringAnime.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var container = document.getElementById('container');
+    var ascii = document.getElementById('ascii');
+    var src = './video/bad_apple.mp4' ;
+    var s = new StringAnime(container,960,540,src,function(html){
+        ascii.innerHTML = html;
+    });
+</script>
+</html>
